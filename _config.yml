@@ -15,8 +15,8 @@ markdown: kramdown
 # theme: minima
 permalink: /:year/:month–:day–:title/
 
-# Gemfile, Gemfile.lock - The Gemfile and Gemfile.lock files are used by Bundler to keep track of the required gems and gem versions you need to build your Jekyll site.
 
+# Gemfile, Gemfile.lock - The Gemfile and Gemfile.lock files are used by Bundler to keep track of the required gems and gem versions you need to build your Jekyll site.
 
 sass:
   sass_dir:  _sass
@@ -24,6 +24,7 @@ sass:
 
 gems:
   - jekyll-feed
+#  - jekyll-github-metadata
 #  - jekyll-admin
   - jekyll-paginate
 #  - jekyll-compose
