@@ -1,9 +1,9 @@
-title: Your Practice Sherpa
-email: holler(at)sherpas.io
+title: Practice Prescriptions
+email: PracticeRx(at)gmail
 description: Your navigational aid to managing a 21st century clinical practice
 baseurl: ""
 url: "https://practicerx.github.io"
-twitter_username: practicerx
+twitter_username: practice_rx
 github_username:  practicerx
 link-soundcloud: https://soundcloud.com/practice-sherpa
 
@@ -24,16 +24,16 @@ sass:
 
 gems:
   - jekyll-feed
-  - jekyll-admin
+#  - jekyll-admin
   - jekyll-paginate
-  - jekyll-compose
-  - jekyll-archives
+#  - jekyll-compose
+#  - jekyll-archives
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-livereload
-  - jekyll-assets
-  - autoprefixer-rails
-  - neat
+#  - jekyll-livereload
+#  - jekyll-assets
+#  - autoprefixer-rails
+#  - neat
 
 exclude:
   - README.md

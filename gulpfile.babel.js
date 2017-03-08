@@ -1,4 +1,4 @@
-Deploy'use strict';
+'use strict';
 
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
