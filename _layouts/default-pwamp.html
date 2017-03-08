@@ -1,0 +1,22 @@
+<!doctype html>
+<html ⚡>
+{% include head.html %}
+<body>
+  <main class="page-content wrapper" aria-label="Content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+  {% include header.html %}
+
+  <script async src="{{ "/scripts/main.min.js" | relative_url }}"></script>
+  <script async>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("{{ "/sw.js" | relative_url }}").then(function() {
+      console.log("Service Worker Registered");
+    });
+  }
+  </script>
+</body>
+
+</html>
