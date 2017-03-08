@@ -1,0 +1,12 @@
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Practice_Rx">
+<meta name="twitter:creator" content="@Practice_Rx">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}
+{% else %}{{ site.title | escape }}{% endif %}">
+{% for post in site.posts %}
+<meta name="twitter:description"
+content="{{ post.excerpt | strip_html | truncatewords: 30 }}">
+<meta name="twitter:image" content="{{ site.url }}{{ post.featured-image}} ">
+{% endfor %}
+<!-- end twitter -->

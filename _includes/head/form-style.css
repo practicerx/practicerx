@@ -1,0 +1,20 @@
+form.amp-form-submit-success [submit-success],
+form.amp-form-submit-error [submit-error]{
+  margin-top: 16px;
+}
+form.amp-form-submit-success [submit-success] {
+  color: green;
+}
+form.amp-form-submit-error [submit-error] {
+  color: red;
+}
+form.amp-form-submit-success.hide-inputs > input {
+  display: none;
+}
+.horizontal-display {
+  display: flex;
+  align-items: center;
+}
+.other-input {
+  margin: 0 16px;
+}
