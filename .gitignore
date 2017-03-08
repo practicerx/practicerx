@@ -1,0 +1,93 @@
+/html
+/md
+/vendor
+/tmp
+tmp/
+/public/storage
+.env
+/spec/examples.txt
+google*.html
+
+/assets/podcast
+Gemfile
+/_sass
+/_sass/.
+# _drafts
+# _includes
+# _layouts
+# references
+# resources
+# dev
+
+
+### Jekyll ###
+_site
+_site/
+.sass-cache/
+.jekyll-metadata
+/.jekyll-metadata
+scripts/
+.publish/
+css/
+comments.json
+
+### Ruby ###
+Gemfile.lock
+.bundle
+
+### Always-ignore files and folders ###
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swn
+*.swo
+*.swp
+._*
+*~
+
+### Ignore packages ###
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+### Packages ###
+node_modules
+node_modules/
+/node_modules
+bower_components
+npm-debug.log
+
+### Sass ###
+.sass-cache
+.sass-cache/
+*.css.map
+
+### Linux ###
+*~
+
+### OSX ###
+.DS_Store
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+### Linux ###
+*~
+.Trash-*
+
+### Windows ###
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Lighthouse ###
+validate/log.json

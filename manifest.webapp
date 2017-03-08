@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "practicerx.github.io",
+  "launch_path": "/index.html",
+  "description": "Your navigational aid to managing a 21st century clinical practice",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "practicerx.github.io",
+      "description": "Your navigational aid to managing a 21st century clinical practice"
+    }
+  }
+}

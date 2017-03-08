@@ -1,0 +1,56 @@
+title: Your Practice Sherpa
+email: holler(at)sherpas.io
+description: Your navigational aid to managing a 21st century clinical practice
+baseurl: ""
+url: "https://practicerx.github.io"
+twitter_username: practicerx
+github_username:  practicerx
+link-soundcloud: https://soundcloud.com/practice-sherpa
+
+bg-logo: "/assets/images/sherpas-grey.svg"
+logo: "/assets/images/sherpa-caps.svg"
+
+# Build settings
+markdown: kramdown
+# theme: minima
+permalink: /:year/:month–:day–:title/
+
+# Gemfile, Gemfile.lock - The Gemfile and Gemfile.lock files are used by Bundler to keep track of the required gems and gem versions you need to build your Jekyll site.
+
+
+sass:
+  sass_dir:  _sass
+  style:  compressed
+
+gems:
+  - jekyll-feed
+  - jekyll-admin
+  - jekyll-paginate
+  - jekyll-compose
+  - jekyll-archives
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-livereload
+  - jekyll-assets
+  - autoprefixer-rails
+  - neat
+
+exclude:
+  - README.md
+  - LICENSE
+  - readme.md
+  - bundle
+  - src
+  - CNAME
+  - google*.html
+  - Gemfile
+  - Gemfile.lock
+  - bower.json
+  - package.json
+  - script
+  - scss
+  - media
+  - ".bundle"
+  - vendor
+  - node_modules
+  - assets/podcast
