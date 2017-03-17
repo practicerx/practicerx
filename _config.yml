@@ -1,14 +1,17 @@
-title: Practice Prescriptions
+title: The Practice Prescription
+title-short: Practice Rx
 email: PracticeRx(at)gmail
 description: Your navigational aid to managing a 21st century clinical practice
 baseurl: ""
 url: "https://practicerx.github.io"
+facebook_username: practiceRx
 twitter_username: practice_rx
 github_username:  practicerx
 link-soundcloud: https://soundcloud.com/practice-sherpa
 
-bg-logo: "/assets/images/sherpas-grey.svg"
-logo: "/assets/images/sherpa-caps.svg"
+bg-logo: /images/sherpas-grey.svg
+logo-mtn: /images/sherpa-caps.svg
+logo-rx: /images/rx-logo-medium.png
 
 # Build settings
 markdown: kramdown
@@ -24,7 +27,7 @@ sass:
 
 gems:
   - jekyll-feed
-#  - jekyll-github-metadata
+  - jekyll-github-metadata
 #  - jekyll-admin
   - jekyll-paginate
 #  - jekyll-compose
@@ -34,6 +37,7 @@ gems:
 #  - jekyll-livereload
 #  - jekyll-assets
 #  - autoprefixer-rails
+#  - bourbon
 #  - neat
 
 exclude:
@@ -50,6 +54,8 @@ exclude:
   - package.json
   - script
   - scss
+  - _sass
+  - css
   - media
   - ".bundle"
   - vendor
