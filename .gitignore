@@ -13,7 +13,6 @@ images/*
 # assets/podcast
 assets/*
 
-Gemfile
 references
 resources
 dev/
@@ -23,17 +22,17 @@ dev/
 _site
 _site/
 _drafts
-_includes/amp/
+_includes/amp/**.html
 _scripts
 .jekyll-metadata
 /.jekyll-metadata
 scripts/
 .publish/
-_sass
 comments.json
-metadata.json
+# metadata.json
 
 ### Ruby ###
+# Gemfile
 Gemfile.lock
 .bundle
 
@@ -67,6 +66,7 @@ bower_components
 npm-debug.log
 
 ### Sass ###
+_sass
 .sass-cache
 .sass-cache/
 *.css.map
