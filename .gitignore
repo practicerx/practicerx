@@ -9,10 +9,8 @@ tmp/
 
 google*.html
 images/*
-# assets/
-# assets/podcast
-assets/*
-
+assets/css
+assets/podcast
 references
 resources
 dev/
@@ -22,14 +20,14 @@ dev/
 _site
 _site/
 _drafts
-_includes/amp/**.html
+_includes/amp/components
 _scripts
 .jekyll-metadata
 /.jekyll-metadata
-scripts/
 .publish/
 comments.json
 # metadata.json
+validate
 
 ### Ruby ###
 # Gemfile
