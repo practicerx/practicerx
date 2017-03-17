@@ -1,24 +1,31 @@
 ---
 layout: default-pwamp
+navbar: display
+navbar_display: Home
 ---
+{% include hero.html %}
+{% include podcast-loop.html %}
+{% include blog-loop.html %}
 
-<div class="home">
+<section id="topics-loop" class="cf frame wrapper">
+  <div class="container">
+    <header class="section-header">Topics of Interest</header>
 
-  <h1 class="page-heading">Posts</h1>
+    <amp-accordion id="hidden-header" disable-session-states>
+      <section class="topic-container">
+        <div class="topic-meta">
+          <span class="topic">Title</span>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <p class="topic-excerpt">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id.</p>
+          <span class="expand">Read More</span>
+        </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        <article>
+          <p>Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio, odio arcu in eu wisi.
 
+          <p>Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio, odio arcu in eu wisi.</article>
+      </section>
+    </amp-accordion>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-</div>
+  </div>
+</section>

@@ -6,18 +6,22 @@ tmp/
 /public/storage
 .env
 /spec/examples.txt
-google*.html
 
-/assets/podcast
+google*.html
+images/*
+# assets/
+# assets/podcast
+assets/*
+
 Gemfile
 /_sass
 /_sass/.
-# _drafts
-# _includes
+_drafts
+_includes/amp/
 # _layouts
-# references
-# resources
-# dev
+references
+resources
+dev
 
 
 ### Jekyll ###
@@ -28,8 +32,10 @@ _site/
 /.jekyll-metadata
 scripts/
 .publish/
-css/
+css
+_sass
 comments.json
+metadata.json
 
 ### Ruby ###
 Gemfile.lock

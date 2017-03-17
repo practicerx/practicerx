@@ -7,6 +7,46 @@ import browserSync from 'browser-sync';
 import swPrecache from 'sw-precache';
 const $ = gulpLoadPlugins();
 
+// SASS
+gulp.task('sass', function() {
+    return gulp.src('_sass/main.sass')
+        .pipe($.sass({
+            sourceComments: 'map',
+            onError: browserSync.notify
+        }))
+        .pipe(gulp.dest('assets/css'));
+});
+
+// Minify and add prefix to css. – changed destination output from '_site/css' to the '_includes' folder so that it can be inline in head.html
+gulp.task('css', () => {
+  const AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+  ];
+
+  return gulp.src('assets/css/main.css')
+    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe($.cssnano())
+    .pipe(gulp.dest('_includes/'));
+});
+
+// Compile scss to css.
+//gulp.task('scss', () => {
+  //  return gulp.src('sass/main.sass')
+    //    .pipe($.sass({
+      //      includePaths: ['css'],
+        //    onError: browserSync.notify
+  //      }))
+    //    .pipe(gulp.dest('css'));
+//});
+
 // Minify the HTML.
 gulp.task('minify-html', () => {
   return gulp.src('_site/**/*.html')
@@ -44,37 +84,7 @@ gulp.task('scripts', () => {
     .pipe($.concat('main.min.js'))
     .pipe($.babel())
     .pipe($.uglify({preserveComments: 'some'}))
-    .pipe(gulp.dest('scripts'));
-});
-
-// Minify and add prefix to css.
-gulp.task('css', () => {
-  const AUTOPREFIXER_BROWSERS = [
-    'ie >= 10',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4.4',
-    'bb >= 10'
-  ];
-
-  return gulp.src('css/main.css')
-    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe($.cssnano())
-    .pipe(gulp.dest('_site/css'));
-});
-
-// Compile scss to css.
-gulp.task('scss', () => {
-    return gulp.src('sass/main.sass')
-        .pipe($.sass({
-            includePaths: ['css'],
-            onError: browserSync.notify
-        }))
-        .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('assets/scripts/'));
 });
 
 // Watch change in files.
@@ -84,26 +94,27 @@ gulp.task('serve', ['jekyll-build'], () => {
     // Run as an https by uncommenting 'https: true'
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
-    // https: true,
+    https: true,
     server: '_site',
     port: 3000
   });
 
+  // Watch sass changes.
+  gulp.watch('_sass/**/*.sass', ['sass']);
+
+  // Watch JavaScript changes.
+  gulp.watch('_scripts/**/*.js', ['scripts']);
+
   // Watch html changes.
   gulp.watch([
-    'css/**/*.css',
+    'assets/*.css',
     'scripts/**/*.js',
     '_includes/**/*.html',
     '_layouts/**/*.html',
     '_posts/**/*.md',
+    '*.html',
     'index.html'
   ], ['jekyll-build', browserSync.reload]);
-
-  // Watch sass changes.
-  gulp.watch('sass/**/*.sass', ['scss']);
-
-  // Watch JavaScript changes.
-  gulp.watch('_scripts/**/*.js', ['scripts']);
 });
 
 gulp.task('generate-service-worker', function(callback) {
@@ -117,12 +128,13 @@ gulp.task('generate-service-worker', function(callback) {
   }, callback);
 });
 
-gulp.task('jekyll-build', ['scripts', 'scss'], $.shell.task([ 'jekyll build' ]));
+// ? Running 'sass' task here, I believe, is redundant.
+gulp.task('jekyll-build', ['scripts', 'sass', 'css'], $.shell.task([ 'jekyll build' ]));
 
 // Default task.
 gulp.task('default', () =>
   runSequence(
-    'scss',
+    'sass',
     'jekyll-build',
     'minify-html',
     'css',
@@ -131,14 +143,13 @@ gulp.task('default', () =>
   )
 );
 
+// Removed 'sass', 'css' for ?redundancy.
 gulp.task('build', () =>
   runSequence(
-    'scss',
-    'jekyll-build',
     'minify-html',
-    'css',
+    'minify-images',
     'generate-service-worker',
-    'minify-images'
+    'serve'
   )
 );
 
@@ -150,7 +161,7 @@ gulp.task('gh-pages', () => {
 
 gulp.task('deploy', () => {
   runSequence(
-    'scss',
+    'sass',
     'jekyll-build',
     'minify-html',
     'css',

@@ -9,13 +9,28 @@
   {% include footer.html %}
   {% include header.html %}
 
-  <script async src="{{ "/scripts/main.min.js" | relative_url }}"></script>
+  <!-- {% include amp/analytics.html %} -->
+
+  <script async src="{{ "/assets/scripts/main.min.js" | relative_url }}"></script>
   <script async>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register("{{ "/sw.js" | relative_url }}").then(function() {
-      console.log("Service Worker Registered");
+    navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function(reg) {
+      console.log('Service Worker Registered');
     });
   }
+
+  self.addEventListener('install', function(event) {
+  event.waitUntil(
+    fetchStuffAndInitDatabases()
+    );
+  });
+
+  self.addEventListener('activate', function(event) {
+    // You're good to go!
+  });
+
+  // You can pass a promise to event.waitUntil to extend the installation process.
+  // Once activate fires, your service worker can control pages
   </script>
 </body>
 
