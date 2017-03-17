@@ -1,0 +1,52 @@
+<section id="blog-loop" class="cf frame wrapper">
+  <div class="container">
+    <header class="section-header">From the Rx Pad</header>
+
+    <amp-accordion id="hidden-header" disable-session-states>
+      <section class="blog-post">
+        <div class="blog-meta">
+          <span class="post-no">001</span>
+          <span class="post-title">Title</span>
+
+          <p class="post-excerpt">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id.</p>
+          <span class="expand">Read More</span>
+        </div>
+
+        <article>
+          <p>Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio, odio arcu in eu wisi.
+
+          <p>Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio, odio arcu in eu wisi.</article>
+      </section>
+    </amp-accordion>
+
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="items">
+      {% for post in site.posts %}
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <header class="post-header">
+          <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+          <time class="post-meta date" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
+          {% if post.category %}<span class="post-meta category">{{ post.category }}</span>{% endif %}
+          </header>
+        <main class="post-excerpt" itemprop="description">
+          <p>{{ post.excerpt | strip_html | truncatewords: 75 }}
+            <span class="link"><a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">Read More</a></span>
+            </p>
+          </main>
+        </article>
+      {% endfor %}
+      </div>
+
+  </div>
+</section>
