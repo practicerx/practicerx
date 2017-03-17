@@ -9,9 +9,8 @@
   {% include footer.html %}
   {% include header.html %}
 
-  <!-- {% include amp/analytics.html %} -->
-
-  <script async src="{{ "/assets/scripts/main.min.js" | relative_url }}"></script>
+  {% include amp/analytics.html %}
+  {% include scripts.html %}
   <script async>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function(reg) {
