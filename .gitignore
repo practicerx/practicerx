@@ -8,9 +8,9 @@ tmp/
 /spec/examples.txt
 
 google*.html
-images/*
 assets/css
 assets/podcast
+images/sherpa*.svg
 references
 resources
 dev/

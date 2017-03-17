@@ -1,0 +1,25 @@
+<svg viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+      <rect id="path-1" x="0" y="0" width="178" height="172"></rect>
+      <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="178" height="172" fill="white">
+          <use xlink:href="#path-1"></use>
+      </mask>
+  </defs>
+    <g id="svgs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="file-cabinet" stroke="#FFFFFF">
+            <g transform="translate(7.000000, 10.000000)">
+                <use id="cabinet" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                <g id="drawers" transform="translate(12.000000, 15.000000)">
+                    <g id="bottom" transform="translate(0.000000, 76.714286)">
+                        <path d="M93.458005,31 L93.458005,33.9775512 C93.458005,34.1424851 93.2673914,34.2761905 93.0237128,34.2761905 L61.4342922,34.2761905 C61.1944392,34.2761905 61,34.1404182 61,33.9775512 L61,31" id="handle"></path>
+                        <rect id="drawer" stroke-width="2" x="0" y="0" width="153.634557" height="65.5238095"></rect>
+                    </g>
+                    <g id="top">
+                        <path d="M93.458005,31 L93.458005,33.9775512 C93.458005,34.1424851 93.2673914,34.2761905 93.0237128,34.2761905 L61.4342922,34.2761905 C61.1944392,34.2761905 61,34.1404182 61,33.9775512 L61,31" id="handle"></path>
+                        <rect id="drawer" stroke-width="2" x="0" y="0" width="153.634557" height="65.5238095"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

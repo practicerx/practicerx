@@ -1,0 +1,9 @@
+<svg viewBox="859 568 51 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M902.306534,589.264831 L902.306534,615.202104 C902.306534,615.64277 901.951789,616 901.51657,616 L868.396116,616 C867.959831,616 867.606152,615.650312 867.606152,615.202104 L867.606152,589.264831 L861.253957,589.264831 C858.710233,589.264831 858.265942,587.991026 860.274962,586.409193 L883.05128,568.475905 C883.851253,567.846034 885.147219,567.845211 885.948237,568.475905 L908.724555,586.409193 C910.727596,587.986318 910.286142,589.264831 907.74556,589.264831 L902.306534,589.264831 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="50.9647502" height="47.996807" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <use id="house" stroke="#E6E6E6" mask="url(#mask-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" xlink:href="#path-1"></use>
+</svg>
