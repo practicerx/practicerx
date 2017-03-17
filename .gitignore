@@ -14,25 +14,21 @@ images/*
 assets/*
 
 Gemfile
-/_sass
-/_sass/.
-_drafts
-_includes/amp/
-# _layouts
 references
 resources
-dev
+dev/
 
 
 ### Jekyll ###
 _site
 _site/
-.sass-cache/
+_drafts
+_includes/amp/
+_scripts
 .jekyll-metadata
 /.jekyll-metadata
 scripts/
 .publish/
-css
 _sass
 comments.json
 metadata.json
